@@ -1,0 +1,78 @@
+<div class="loading" *ngIf="loading">
+  <img src="../../assets/images/loading_1.gif" />
+
+</div>
+
+<div>
+    <form  class="emp-form col-md-12" #infoOoyalaForm="ngForm"  >
+    <div class="form-row ">
+        <div class="form-group col-md-6">
+            <span>Id Content:</span>
+            <input [(ngModel)]="idContent" name="idContent"
+                 class="form-control" />
+
+          </div>
+
+
+
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-1">
+            <button #btnGuardar
+                   class="btn btn-primary"
+                   (click)="getInfoOoyala(idContent)">
+                   <i class="glyphicon glyphicon-search"></i> Buscar
+             </button>
+
+           </div>
+           <div class="form-group col-md-2 ">
+
+
+             <button  class="btn btn-warning fa-lg" (click)="clean('')">
+                <i class="glyphicon glyphicon-ban-circle"></i> Cancelar
+              </button>
+
+            </div>
+
+
+    </div>
+
+    </form>
+</div>
+
+
+<div class="backdrop" [ngStyle]="{'display':displaydetailOoyala}"></div>
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="background:rgba(0, 0, 0, 0.5);"  [ngStyle]="{'display':displaydetailOoyala}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header"><h6>Ooyala Info.</h6></div>
+
+       <div class="modal-body" style="height: 400px;">
+        <app-detail-ooyala #modalDetailOoyala ></app-detail-ooyala>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+                  (click)="onCloseHandled('displaydetailOoyala')" >Close</button>
+        </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal !-->
+
+
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="background:rgba(0, 0, 0, 0.5);"
+      [ngStyle]="{'display':modalMsg}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header"><h6>Mensaje.</h6></div>
+         <div class="modal-body" >
+          <p>{{ mensajeTxt }}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default"
+                    (click)="onCloseHandled('modalMsg')" >Close</button>
+          </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal !-->

@@ -1,0 +1,73 @@
+<form  class="emp-form col-md-12" #detailOoyalaForm="ngForm"  >
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Nombre :</span>
+            <input  name="name" #name="ngModel"
+                    [(ngModel)]="detalle.name"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Descripcion :</span>
+            <input  name="description" #description="ngModel"
+                    [(ngModel)]="detalle.description"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Imagen url :</span>
+            <input name="preview_image_url_ssl" #preview_image_url_ssl="ngModel"
+                    [(ngModel)]="detalle.preview_image_url_ssl"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Source url :</span>
+            <input name="source_file_url"  #source_file_url="ngModel"
+                    [(ngModel)]="detalle.source_file_url"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Host url :</span>
+            <input name="hosted_at"  #hosted_at="ngModel"
+                    [(ngModel)]="detalle.hosted_at"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Player Id :</span>
+            <input name="player_id"   #player_id="ngModel"
+            [(ngModel)]="detalle.player_id"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <span>Fecha Creacion :</span>
+            <input name="created_at"  #created_at="ngModel"
+            [(ngModel)]="detalle.created_at"
+                 class="form-control" disabled/>
+
+
+        </div>
+    </div>
+
+</form>
